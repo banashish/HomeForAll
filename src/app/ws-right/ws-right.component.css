@@ -1,0 +1,10 @@
+.header {
+  margin-top: 50px;
+  margin-left: 80px;
+}
+.caraousel-items {
+  font-size: 35px;
+  /* font-weight: 700; */
+  font-family: "Alegreya", serif;
+  color: darkgray;
+}

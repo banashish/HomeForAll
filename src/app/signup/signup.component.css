@@ -1,0 +1,56 @@
+.heading-text {
+  font-size: 33px;
+  color: midnightblue;
+  font-weight: 700;
+}
+
+.btn {
+  border-radius: 4px;
+  color: white;
+  background-color: midnightblue;
+  font-weight: 400;
+  padding: 7px 25px;
+  margin-top: 4px;
+}
+
+.form-settings {
+  padding-top: 12px;
+  margin-left: 0px;
+  width: 50vh;
+}
+
+input {
+  border: 3px midnightblue strong;
+}
+
+label {
+  color: midnightblue;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-control {
+  border-color: midnightblue;
+}
+
+.form-control:focus {
+  border-color: midnightblue;
+  box-shadow: 0px 1px 1px midnightblue inset, 0px 0px 8px midnightblue;
+}
+
+small {
+  color: darkgray;
+}
+
+input:not(:placeholder-shown) {
+  background-color: rgba(247, 192, 192, 0.534) !important;
+}
+
+input:placeholder-shown {
+  background-color: #ffffff !important;
+}
+
+.text-info {
+  color: darkgray !important;
+  font-size: large;
+}
