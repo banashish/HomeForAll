@@ -1,0 +1,35 @@
+.user-info{
+    margin-top: 7px;
+    padding-right: 20px;
+    padding-top: 10px;
+    border: 2px solid midnightblue;
+}
+
+.btn-change{
+    padding-top: 2px;
+    background-color: midnightblue;
+    color: antiquewhite;
+    width: 100px;
+}
+
+::ng-deep .nav-tabs .nav-link:hover{
+    border: 1px solid midnightblue;
+}
+
+.nav-tabs > li > a {
+    color: midnightblue;
+}
+/* .nav-tabs > li.active > a,  */
+.nav-tabs > li > a:focus, 
+.nav-tabs > li > a:hover {
+  background-color:midnightblue;
+  color: antiquewhite;
+}
+.nav-tabs {
+    border-bottom: 0px;
+}
+
+.nav-link {
+    padding-bottom: 19px;
+    margin-top: 18px;
+}

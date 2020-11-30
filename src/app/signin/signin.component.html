@@ -4,22 +4,57 @@
   </div>
   <div class="row">
     <div class="form-settings">
-      <form>
+      <form [formGroup]="SignInForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="emailforuser">Email address</label>
           <input
             type="email"
             class="form-control"
+            formControlName="username"
             id="emailforuser"
             aria-describedby="emailHelp"
+            placeholder="Enter your Email"
+            [ngClass]="{
+              'is-invalid': form.username.touched && form.username.errors
+            }"
           />
+          <div
+            *ngIf="form.username.touched && form.username.errors"
+            class="invalid-feedback"
+          >
+            <div *ngIf="form.username.errors.required">
+              User name is required
+            </div>
+            <div *ngIf="form.username.errors.email">
+              Email should be a valid
+            </div>
+          </div>
           <small id="emailHelp" class="form-text text-muted"
             >We'll never share your email with anyone else.</small
           >
         </div>
         <div class="form-group pt-2">
           <label for="passwordforuser">Password</label>
-          <input type="password" class="form-control" id="passwordforuser" />
+          <input 
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="passwordforuser"
+            placeholder="Please enter your password"
+            [ngClass]="{
+              'is-invalid': form.password.touched && form.password.errors
+            }" />
+            <div
+            *ngIf="form.password.touched && form.password.errors"
+            class="invalid-feedback"
+          >
+            <div class="error-font" *ngIf="form.password.errors.required">
+              Password is required.
+            </div>
+            <div class="error-font" *ngIf="form.password.errors.minlength">
+              Password should be of minimum length 6.
+            </div>
+          </div>
         </div>
         <button type="submit" class="btn btn-primary mt-4">Submit</button>
       </form>

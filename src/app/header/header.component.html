@@ -1,0 +1,44 @@
+<div class="container-fluid px-0" style="border-bottom: 1px solid midnightblue;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light pb-0 pt-0">
+    <a class="navbar-brand pt-0" href="#"><img src="../../assets/noun_Pets_11640.svg" class="pt-2 d-inline-block align-top mb-0" fill="midnightblue" width="70" height="80" alt="" loading="lazy"></a>
+    <button
+      class="navbar-toggler pt-4"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav nav nav-tabs mr-auto justify-content-center pt-2" style="font-size: larger;">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink] = "['available']"
+            >Home <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] = "['available']">Up For Adoption</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink] = "['your-pets']">Your Pets</a>
+        </li>
+        <li class="nav-item" *ngIf="user.isAdmin">
+          <a class="nav-link" [routerLink] = "['verification']">Verification</a>
+        </li>
+      </ul>
+      <div class="user-info pt-2">
+        <svg width="1em" height="1em" width="32" height="32" viewBox="0 0 16 16" class="bi bi-person-fill" fill="midnightblue" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+        <span class="pl-2">{{user.email}}</span>
+      </div>
+      <div class="log-out pl-5 pt-1">
+        <button type="button" class="btn btn-change" (click)="signOut()">Logout</button>
+      </div>
+    </div>
+  </nav>
+</div>
