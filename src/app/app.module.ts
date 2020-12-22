@@ -22,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
 import { AvailablePetsComponent } from './available-pets/available-pets.component';
 import { UserPetsComponent } from './user-pets/user-pets.component';
 import { ForVerificationPetsComponent } from './for-verification-pets/for-verification-pets.component';
+import { HomeInsideComponent } from './home-inside/home-inside.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ForVerificationPetsComponent } from './for-verification-pets/for-verifi
     AvailablePetsComponent,
     UserPetsComponent,
     ForVerificationPetsComponent,
+    HomeInsideComponent,
   ],
   imports: [
     BrowserModule,

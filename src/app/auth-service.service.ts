@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from  "@angular/fire/auth";
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 export class AuthServiceService {
   public signedIn: Observable<any>;
 
-  constructor(private firebaseAuth: AngularFireAuth, private firestore: AngularFirestore) { }
+  constructor(private firebaseAuth: AngularFireAuth, private firestore: AngularFirestore,private router: Router) { }
 
   signUp(email,password){
     this.firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -20,6 +21,7 @@ export class AuthServiceService {
       };
       this.firestore.collection('Users').doc(uid).set(payload)
       .then(() => {
+          this.router.navigate(['/home']);
           return true;
       })
       .catch(err => {

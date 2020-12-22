@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthServiceGuard } from './auth-service.guard';
 import { AvailablePetsComponent } from './available-pets/available-pets.component';
 import { ForVerificationPetsComponent } from './for-verification-pets/for-verification-pets.component';
+import { HomeInsideComponent } from './home-inside/home-inside.component';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
@@ -33,7 +34,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: AvailablePetsComponent
+        component: HomeInsideComponent
       },
       {
         path: 'available',
