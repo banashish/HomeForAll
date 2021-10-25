@@ -20,6 +20,10 @@ export class HeaderComponent implements OnInit {
   {
     console.log("jenrnjvr");
   }
+  ngUpdate2()
+  {
+    console.log("jenrnjvr");
+  }
 
   signOut(){
     this.authService.signout();
