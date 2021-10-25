@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
       this.user = res.data;
     });
   }
+  ngUpdate()
+  {
+    console.log("jenrnjvr");
+  }
 
   signOut(){
     this.authService.signout();
